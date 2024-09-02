@@ -1,0 +1,201 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m"
+>
+    <Dialog
+        id="dialog"
+        resizable="false"
+        draggable="true"
+        contentWidth="25%"
+        title="Register Your Details:"
+    >
+        <customHeader>
+            <Bar id="_IDBar1">
+                <contentMiddle>
+                    <Title
+                        id="_IDTitle1"
+                        text="Register Your Details:"
+                    />
+                </contentMiddle>
+                <contentRight>
+                    <Button
+                        id="_IDButton1"
+                        icon="sap-icon://decline"
+                        press="onCloseRegisterDialog"
+                        tooltip="Close"
+                    />
+                </contentRight>
+            </Bar>
+        </customHeader>
+        <beginButton>
+            <Button
+                id="idRegisterUserButton"
+                text="Submit"
+                press="onSubmitPress"
+                class="onSubmitBtnFromFragment"
+            />
+        </beginButton>
+        <endButton>
+            <Button
+                id="idCancelRegisterUserButton"
+                text="Clear"
+                press="onClearRegisterDialog"
+                class="onCancelRegisterBtn"
+            />
+        </endButton>
+
+        <content>
+            <form:SimpleForm
+                id="idRegisterUserDetailsForm"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                labelSpanXL="3"
+                labelSpanL="3"
+                labelSpanM="3"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="4"
+                emptySpanL="4"
+                emptySpanM="4"
+                emptySpanS="0"
+                columnsXL="1"
+                columnsL="1"
+                columnsM="1"
+                singleContainerFullSize="false"
+            >
+                <Label
+                    id="idLableEmployeeID"
+                    text="Employee ID "
+                    required="true"
+                />
+                <Input
+                    id="idEmployeeIDInput"
+                    value="{}"
+                    placeholder="ex:111087"
+                    required="true"
+                />
+                <Label
+                    id="idLableResourceName"
+                    text="Resource Name"
+                    required="true"
+                />
+                <Input
+                    id="idResourceNameInput"
+                    value="{}"
+                    placeholder="Enter your Name.."
+                    required="true"
+                />
+
+                <Label
+                    id="idLableRoesurcetype"
+                    text="Resource Type"
+                    required="true"
+                />
+                <ComboBox id="idRoesurcetypeInput" placeholder="Select Resource Type">
+                    <core:Item
+                        id="_IDGenItemPermanentEmployee"
+                        key="PermanentEmployee"
+                        text="Permanent Employee"
+                        
+                    />
+
+                    <core:Item
+                        id="_IDGenItemtemporaryemployee"
+                        key="temporaryemployee"
+                        text="Temporary Employee"
+                    />
+                </ComboBox>
+                <Label
+                    id="idLabelName"
+                    text="Process Area"
+                    required="true"
+                />
+
+                <MultiComboBox id="checkboxContainer" selectionChange="onCheckBoxSelect" placeholder="Select Process Area">
+                    <core:Item
+                        class="dropdown"
+                        id="inboundCheckBox"
+                        key=""
+                        text="Inbound"
+        
+                    />
+                    <core:Item
+                        class="dropdown"
+                        id="outboundCheckBox"
+                        key=""
+                        text="Outbound"
+            
+                    />
+                    <core:Item
+                        class="dropdown"
+                        id="internalCheckBox"
+                        key=""
+                        text="Internal"
+                 
+                    />
+                </MultiComboBox>
+                <!-- <HBox
+                    id="checkboxContainer"
+                    width="100%"
+                >
+                    <CheckBox
+                        id="inboundCheckBox"
+                        text="Inbound"
+                        select="onCheckBoxSelect"
+                    />
+
+                    <CheckBox
+                        id="outboundCheckBox"
+                        text="Outbound"
+                        select="onCheckBoxSelect"
+                    />
+
+                    <CheckBox
+                        id="internalCheckBox"
+                        text="Internal"
+                        select="onCheckBoxSelect"
+                    />
+                </HBox> -->
+                <Label
+                    id="idLableGroup"
+                    text="Group"
+                    required="true"
+                />
+                <MultiComboBox
+                    id="GroupSelect"
+                    items="{path: '/AreaSet'}"
+                    visible="false"
+                >
+                    <core:Item
+                        class="dropdown"
+                        id="_IDGenItem4"
+                        key="{Processgroup}"
+                        text="{Processgroup}"
+                    />
+                </MultiComboBox>
+                <Label
+                    id="idLableEmail"
+                    text="Email"
+                />
+                <Input
+                    id="idInputEmail"
+                    value="{}"
+                    placeholder="Enter Email.."
+                    editable="true"
+                />
+                <Label
+                    id="idLablePhoneNumber"
+                    text="Phone Number"
+                />
+                <Input
+                    id="idInputPhoneNumber"
+                    value="{}"
+                    placeholder="Enter Phone Number.."
+                    editable="true"
+                    required="true"
+                />
+            </form:SimpleForm>
+        </content>
+    </Dialog>
+</core:FragmentDefinition>

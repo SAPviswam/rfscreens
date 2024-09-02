@@ -1,0 +1,187 @@
+<!-- <mvc:View controllerName="com.app.rfscreens.controller.loginpage"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+ <Page
+        id="page"
+        title="{i18n>title}"  
+    >
+        <customHeader >
+            <Bar>
+                <contentMiddle>
+                    <HBox alignItems="Center" >
+                        <Title text="{i18n>title}" />
+                        <Image
+                            id="headerImage"
+                            src="https://artihcus.com/assets/img/AG-logo.png"
+                            width="45px"
+                            height="30px"
+                            class="headerImageClass"
+                        />
+                    </HBox>
+                </contentMiddle>
+            </Bar>
+        </customHeader>
+        <content>
+            <FlexBox
+                id="_IDGenFlexBoxMain"
+                justifyContent="Center"
+                alignItems="Center"
+                height="100%"
+                direction="Row"
+            >
+                <VBox
+                    id="_IDGenVBoxContainer"
+                    class="boxContainer"
+                >
+                    <Label
+                        id="idwHtext"
+                        class="label"
+                        text="Warehouse No:"
+                        textAlign="Initial"
+                    />
+                    <Input
+                        id="idwhInput"
+                        placeholder="Enter Warehouse No"
+                        width="100%"
+                        textAlign="Initial"
+                    />
+                    <Label
+                        id="_IDGenLabel1"
+                        class="label"
+                        text="Resource ID:"
+                        textAlign="Initial"
+                    />
+                    <Input
+                        id="IdResourceInput"
+                        placeholder="Enter Resource ID"
+                        width="100%"
+                        textAlign="Initial"
+                    />
+                    <Label
+                        id="_IDGenLabel2"
+                        class="label"
+                        text="Password:"
+                        textAlign="Initial"
+                    />
+                    <Input
+                        id="Idpassword"
+                        placeholder="Enter Password"
+                        width="100%"
+                        textAlign="Initial"
+                        type="Password"
+                    />
+                    <Link
+                        id="_IDforgotLink"
+                        text="Forgot Password?"
+                        press="handleLinkPress"
+                    />
+
+                    <VBox
+                        id="buttonVBox"
+                        class="sapUiSmallMarginTop"
+                        alignItems="Center"
+                    >
+                        <HBox
+                            id="buttonHBox"
+                            justifyContent="Center"
+                            alignItems="Center"
+                            width="100%"
+                        >
+                            <Button
+                                icon="sap-icon://visits"
+                                id="Loginbtn"
+                                text="Login"
+                                type="Accept"
+                                press="onResourceLoginBtnPress"
+                            />
+                           
+                            <ToolbarSpacer
+                                id="_IDGenToolbarSpacer1"
+                                width="40px"
+                            />
+                            
+                            <Button
+                                id="Signupbtn"
+                                text="Register!"
+                                type="Default"
+                                press="onPressSignupBtn"
+                            />
+                        </HBox>
+                    </VBox>
+                </VBox>
+                <Image
+                    id="idiimage"
+                    src="../image/login.gif"
+                    width="200px"
+                    height="200px"
+                    class="person"
+                />
+            </FlexBox>
+            <MessageStrip
+                id="idMessageStrip"
+                visible="false"
+                type="Success"
+                showIcon="true"
+                showCloseButton="true"
+                class="sapUiMediumMarginBottom"
+            />
+        </content>
+    </Page>
+</mvc:View> -->
+<mvc:View controllerName="com.app.rfscreens.controller.loginpage"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page">
+        <customHeader>
+            <Bar>
+                <contentMiddle>
+                    <HBox alignItems="Center">
+                        <Title text="{i18n>title}" />
+                        <Image
+                            id="headerImage"
+                            src="https://artihcus.com/assets/img/AG-logo.png"
+                            width="45px"
+                            height="30px"
+                            class="headerImageClass"
+                        />
+                    </HBox>
+                </contentMiddle>
+            </Bar>
+        </customHeader>
+        <content>
+            <FlexBox
+                id="_IDGenFlexBoxMain"
+                justifyContent="Center"
+                alignItems="Center"
+                height="100%"
+                direction="Row"
+                class="mobileFlexBox"
+            >
+                <VBox id="_IDGenVBoxContainer" class="boxContainer">
+                    <Label id="idwHtext" class="label" text="Warehouse No:" textAlign="Initial" />
+                    <Input id="idwhInput" placeholder="Enter Warehouse No" width="100%" textAlign="Initial" />
+                    <Label id="_IDGenLabel1" class="label" text="Resource ID:" textAlign="Initial" />
+                    <Input id="IdResourceInput" placeholder="Enter Resource ID" width="100%" textAlign="Initial" />
+                    <Label id="_IDGenLabel2" class="label" text="Password:" textAlign="Initial" />
+                    <Input id="Idpassword" placeholder="Enter Password" width="100%" textAlign="Initial" type="Password" />
+                    <Link id="_IDforgotLink" text="Forgot Password?" press="handleLinkPress" />
+                    <VBox id="buttonVBox" class="sapUiSmallMarginTop" alignItems="Center">
+                        <HBox id="buttonHBox" justifyContent="Center" alignItems="Center" width="100%">
+                            <Button icon="sap-icon://visits" id="Loginbtn" text="Login" type="Accept" press="onResourceLoginBtnPress" />
+                            <ToolbarSpacer id="_IDGenToolbarSpacer1" width="40px" />
+                            <Button id="Signupbtn" text="Register!" type="Default" press="onPressSignupBtn" />
+                        </HBox>
+                    </VBox>
+                </VBox>
+                <Image
+                    id="idiimage"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Man_Working_at_his_Desk_Cartoon_Vector.svg/1280px-Man_Working_at_his_Desk_Cartoon_Vector.svg.png"
+                    width="300px"
+                    height="250px"
+                    class="person mobileImage"
+                />
+            </FlexBox>
+            <MessageStrip id="idMessageStrip" visible="false" type="Success" showIcon="true" showCloseButton="true" class="sapUiMediumMarginBottom" />
+        </content>
+    </Page>
+</mvc:View>

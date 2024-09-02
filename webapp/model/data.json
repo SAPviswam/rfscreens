@@ -1,0 +1,91 @@
+{
+	"selectedKey": "page2",
+	"navigation": [
+		{
+			"title": "Inbound Process",
+			"icon": "sap-icon://shipping-status",
+			"expanded": true,
+			"key": "root1",
+			"items": [
+				{
+					"title": "Unloading",
+					"key": "page1"
+				},
+				{
+					"title": "Deconsolidation",
+					"key": "page2"
+				},
+                {
+					"title": "Putaway",
+					"key": "page3"
+				},
+                {
+					"title": "Receiving Of Hanndling Units",
+					"key": "page4"
+				},
+                {
+					"title": "Set Ready for warehouse processing",
+					"key": "page5"
+				}
+			]
+		},
+		{
+			"title": "Outbound Process",
+			"icon": "sap-icon://inventory",
+			"expanded": false,
+			"items": [
+				{
+					"title": "Picking",
+                    "key": "page6"
+				},
+				{
+					"title": "Packing",
+                    "key": "page7"
+				},
+                {
+					"title": "Loading",
+                    "key": "page8"
+				},
+				{
+					"title": "Pick Point",
+                    "key": "page9"
+				},
+                {
+					"title": "Consumption",
+                    "key": "page10"
+				},
+				{
+					"title": "Distribution Equipment",
+                    "key": "page11"
+				}
+			]
+		},
+		{
+			"title": "Internal Process",
+			"icon": "sap-icon://company-view",
+			"expanded": false,
+			"items": [
+				{
+					"title": "Inventory Counting",
+                    "key": "page12"
+				},
+				{
+					"title": "Adhoc WT creations",
+                    "key": "page13"
+				},
+				{
+					"title": "Queries",
+                    "key": "page14"
+				},
+                {
+					"title": "Quality Management",
+                    "key": "page15"
+				},
+                {
+					"title": "Resource Management",
+                    "key": "page16"
+				}
+			]
+		}
+    ]
+}
